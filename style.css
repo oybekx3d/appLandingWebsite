@@ -1,0 +1,236 @@
+:root{
+    --brightText: #fff;
+    --notBrightText: #697586;
+    --darkText: #000;
+    --background: #f0f0f0;
+    --accent: #0264AA;
+}
+
+html{
+    font-family: poppins, sans-serif;
+}
+body{
+    margin: 0;
+}
+.buttonMain{
+    background-color: var(--accent);
+    color: var(--brightText);
+    border: none;
+    padding: 1.5rem 3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 1rem;
+    font-weight: 700;
+}
+
+#pageIndex{
+    margin-top: 10rem;
+    background-color: var(--background);
+    color: var(--darkText);
+    & main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        section{
+            padding: 2rem 15rem;
+            border: red 3px solid;
+        }
+        #hero{
+            display: grid;
+            max-height: 80vh;
+            grid-template-columns: 3fr 2fr;
+            & div{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+            }
+            & img{
+                max-width: 30vw;
+            }
+            & h1{
+                font-size: 4rem;
+                margin: auto 0;
+                font-weight: 1000;
+                line-height: 200%;
+            }
+            & p{
+                color: var(--notBrightText);
+                font-size: 2.5rem;
+            }
+            .logo{
+                max-width: 15vw;
+            }
+        }
+        #ilovaMaqsadi{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            & h2{
+                font-size: 5rem;
+                font-weight: 1000;
+                margin-bottom: 1rem;
+            }
+            & p{
+                text-align: center;
+                background-color: var(--accent);
+                border-radius: 1rem;
+                font-size: 5rem;
+                font-weight: 700;
+                color: var(--brightText);
+                padding: 5rem 2rem;
+                & span{
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 8rem;
+                }
+            }
+        }
+        #ilovaFunksiyalari{
+            display: grid;
+            gap: 4rem;
+            & article{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 4rem;
+                & img{
+                    width: 100%;
+                    background-color:#e2e2e2;
+                    border-radius: 1rem;
+                    object-fit: contain;
+                    object-position: center;
+                }
+                & div{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 2rem 4rem;
+                    border: var(--notBrightText) 1px solid;
+                    border-radius: 1rem;
+                    text-align: center;
+                    & aside{
+                        font-size: 2rem;
+                        color: var(--notBrightText);
+                        margin-bottom: 1rem;
+                    }
+                    & h3{
+                        font-size: 3rem;
+                        margin: auto;
+                    }
+                    & p{
+                        font-size: 2rem;
+                        color: var(--notBrightText);
+                    }
+                }
+                &:nth-child(odd){
+                    & img{
+                        order: 2;
+                    }
+                }
+            }
+        }
+        #negaBiz article{
+            display: grid !important;
+            grid-template-columns: 1fr 2fr;
+            background-color: var(--accent);
+            border-radius: 3rem;
+            display: flex;
+            color: var(--brightText);
+            padding: 2rem 8rem;
+            & div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            & h2{
+                font-size: 5rem;
+                font-weight: 1000;
+            }
+            & p{
+                font-size: 2.5rem;
+                margin: auto 0;
+                text-align: end;
+                font-weight: 700;
+                margin-left: 3ch;
+            }
+            & img{
+                width: 100%;
+            }
+        }
+        #foydaliTomonlari article{
+            display: grid !important;
+            grid-template-columns: 1fr 1fr;
+            display: flex;
+            color: var(--darkText);
+            & div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            & h2{
+                font-size: 5rem;
+                font-weight: 1000;
+            }
+            & p{
+                font-size: 2rem;
+                line-height: 200%;
+            }
+            & img{
+                width: 100%;
+            }
+        }
+        #yuklabOling {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align content to the top */
+            gap: 2rem;
+            background-color: var(--accent);
+            color: var(--brightText);
+            & .content {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
+            & h2 {
+                font-size: 6rem;
+                text-wrap: nowrap;
+                font-weight: 1000;
+                margin-bottom: 0rem;
+            }
+            & .subtitle {
+                font-size: 4rem;
+                margin-bottom: 1.5rem;
+                margin-top: 0;
+            }
+            & .main-download {
+                display: inline-block;
+                width: fit-content;
+                font-weight: bold;
+                background-color: var(--darkText);
+                padding: 1rem 2rem;
+                border-radius: 12px;
+                margin-bottom: 1.5rem;
+                text-decoration: none;
+                font-size: 1rem;
+            }
+            & .store-buttons {
+                display: flex;
+                gap: 1rem;
+            }
+            & .store-buttons img {
+                height: 50px;
+            }
+            & .image-wrapper {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            & .image-wrapper img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
