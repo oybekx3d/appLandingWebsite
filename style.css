@@ -19,6 +19,12 @@ html {
 body {
     margin: 0;
 }
+main * {
+  transition: all 0.3s ease !important;
+}
+* button:hover{
+  opacity: 0.8;
+}
 
 .buttonMain {
     background-color: var(--accent);
@@ -27,7 +33,6 @@ body {
     padding: 1.5rem 3rem;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
     border-radius: 1rem;
     font-weight: 700;
 }
@@ -37,7 +42,7 @@ h2{
 }
 
 #pageIndex {
-    margin-top: 10rem;
+    margin-top: 5vw;
     background-color: var(--background);
     color: var(--darkText);
 }
@@ -54,14 +59,15 @@ h2{
 
 #pageIndex main section {
     padding: 2rem 15rem;   /* will override for smaller screens below */
-    border: red 3px solid; /* remove or adjust for production */
 }
 
 /* -------- Hero Section -------- */
 #hero {
     display: grid;
-    /* max-height: 80vh; */
     grid-template-columns: 3fr 2fr;
+    & .logo{
+      max-width: 20vw !important;
+    }
 }
 
 #hero > div {
@@ -110,6 +116,7 @@ h2{
     font-size: 5rem;
     font-weight: 700;
     color: var(--brightText);
+    position: relative;
     padding: 5rem 2rem;
 }
 
@@ -217,6 +224,7 @@ h2{
 }
 
 #foydaliTomonlari article h2 {
+    text-align: start;
     font-size: 5rem;
     font-weight: 1000;
 }
@@ -356,7 +364,7 @@ footer p {
 
     #ilovaMaqsadi p {
         font-size: 3rem;
-        padding: 3rem 2rem;
+        padding: 5rem 5rem;
     }
 
     #ilovaMaqsadi p span {
@@ -417,19 +425,24 @@ footer p {
   footer {
     padding: 2rem 4rem;
   }
-
+  section{
+    padding: 2rem 2rem !important;
+  }
   /* Hero adjusts to two columns: 2fr 1fr */
   #hero {
     grid-template-columns: 2fr 1fr;
+    & button{
+      font-size: 1.2rem !important;
+    }
   }
   #hero h1 {
-    font-size: 3rem;
+    font-size: 2.3rem !important;
   }
   #hero p {
-    font-size: 2rem;
+    font-size: 1.5rem !important;
   }
-  #hero img {
-    max-width: 40vw;
+  #hero img{
+    max-width: 40vw !important;
   }
 
   /* Ilova Maqsadi text shrinks */
@@ -440,9 +453,8 @@ footer p {
     font-size: 2rem !important;
     padding: 4rem 2rem;
   }
-  #ilovaMa
-qsadi p span {
-    font-size: 3rem !important;
+  #ilovaMaqsadi p span {
+    font-size: 4rem !important;
   }
 
   /* Ilova Funksiyalari: keep two columns, but smaller gaps */
@@ -468,24 +480,30 @@ qsadi p span {
 
   /* Nega Biz: adjust text */
   #negaBiz article {
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 3rem !important;
+    & img{
+      margin: auto;
+    }
   }
   #negaBiz article h2 {
-    font-size: 4rem;
+    font-size: 2.2rem !important;
   }
+    #negaBiz * svg{
+      top: -7ch !important;
+    }
   #negaBiz article p {
-    font-size: 2rem;
+    font-size: 1.3rem !important;
   }
 
   /* Foydali Tomonlari */
-  #foydaliTomonlari article {
-    grid-template-columns: 1fr 1fr;
-  }
   #foydaliTomonlari article h2 {
-    font-size: 4rem;
+    font-size: 2.5rem !important;
   }
   #foydaliTomonlari article p {
-    font-size: 1.8rem;
+    font-size: 1.4rem !important;
+  }
+  #foydaliTomonlari article img{
+    margin: auto;
   }
 
   /* Yuklab Oling: stack content vertically */
@@ -521,6 +539,9 @@ qsadi p span {
         grid-template-columns: 1fr !important;
         text-align: center;
         gap: 2rem;
+        & h1{
+            font-size: 1.5rem !important;
+        }
     }
 
     #hero div {
@@ -580,6 +601,9 @@ qsadi p span {
         text-align: center;
     }
 
+    #negaBiz * svg{
+      top: -10ch !important;
+    }
     #negaBiz p,
     #foydaliTomonlari p {
         font-size: 1.5rem !important;
@@ -637,13 +661,11 @@ qsadi p span {
   
   /* Hero */
   #hero h1 {
-    font-size: 1.5rem;
+    font-size: 2rem !important;
   }
-  #hero p {
-    font-size: 1.2rem;
-  }
-  #hero img {
+  #hero img:not(.logo) {
     max-width: 80vw;
+    margin: auto;
   }
   .logo {
     max-width: 35vw;
@@ -697,10 +719,12 @@ qsadi p span {
     padding: 1rem !important;
   }
   #foydaliTomonlari article h2 {
+    text-align: center;
     font-size: 2rem !important;
   }
   #foydaliTomonlari article p {
     font-size: 1rem !important;
+    font-weight: 700;
   }
 
   /* Yuklab Oling */
