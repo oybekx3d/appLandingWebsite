@@ -18,10 +18,56 @@ html {
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 main * {
   transition: all 0.3s ease !important;
 }
+
+
+
+footer{
+  margin: 10vh auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1rem;
+  max-width: 80%;
+  font-size: 1.5rem;
+  & a{
+    text-decoration: none;
+    color: var(--darkText);
+  }
+  & p{
+    margin: 0;
+  }
+  & img{
+    max-width: 10vw;
+  }
+  & section{
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  & a:hover, & p:hover{
+    color: var(--accent);
+  }
+  & a img{
+    max-width: 4ch;
+  }
+  & #copyright{
+      grid-column: 1 / -1;
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--notBrightText);
+      & a{
+        color: var(--accent);
+      }
+  }
+}
+
+
+
 * button:hover{
   opacity: 0.8;
 }
@@ -113,11 +159,11 @@ h2{
     text-align: center;
     background-color: var(--accent);
     border-radius: 1rem;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 700;
     color: var(--brightText);
     position: relative;
-    padding: 5rem 2rem;
+    padding: 8rem 2rem;
 }
 
 #ilovaMaqsadi p span {
@@ -149,7 +195,7 @@ h2{
     display: flex;
     flex-direction: column;
     padding: 2rem 4rem;
-    border: var(--notBrightText) 1px solid;
+    border: #e2e2e2 .2rem solid;
     border-radius: 1rem;
     text-align: center;
 }
@@ -170,7 +216,7 @@ h2{
     color: var(--notBrightText);
 }
 
-#ilovaFunksiyalari article:nth-child(odd) img {
+#ilovaFunksiyalari article:nth-child(even) img {
     order: 2;
 }
 
@@ -206,7 +252,11 @@ h2{
 }
 
 #negaBiz article img {
-    width: 100%;
+    position: sticky;
+    bottom: 0;
+    scale: 1.2;
+    width: 70%;
+    overflow: hidden;
 }
 
 /* -------- Foydali Tomonlari -------- */
@@ -215,6 +265,76 @@ h2{
     grid-template-columns: 1fr 1fr;
     color: var(--darkText);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#foydaliTomonlari article {
+  position: relative;
+  background-color: transparent; /* or whatever base color you want */
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Inner glow effect */
+#foydaliTomonlari article::before {
+  content: "";
+  position: absolute;
+  overflow: visible;
+  top: 40%;
+  left: -15%;
+  width: 100%;
+  height: 50%;
+  background: radial-gradient(
+    circle at center, rgba(9, 126, 209, 0.733),rgba(0, 0, 0, 0) 50%);
+  filter: blur(40px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ensure content appears above the glow */
+#foydaliTomonlari article > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #foydaliTomonlari article div {
     display: flex;
@@ -255,9 +375,10 @@ h2{
 }
 
 #yuklabOling h2 {
-    font-size: 6rem;
-    white-space: nowrap;
+    font-size: 5rem;
+    text-wrap: nowrap;
     font-weight: 1000;
+    text-align: start;
     margin-bottom: 0rem;
 }
 
@@ -271,21 +392,30 @@ h2{
     display: inline-block;
     width: fit-content;
     font-weight: bold;
-    background-color: var(--darkText);
+    background-color: var(--brightText);
+    color: var(--darkText);
     padding: 1rem 2rem;
     border-radius: 12px;
     margin-bottom: 1.5rem;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 2.5rem;
+    &:hover {
+      scale: 1.05;
+    }
 }
 
 #yuklabOling .store-buttons {
-    display: flex;
-    gap: 1rem;
-}
-
-#yuklabOling .store-buttons img {
-    height: 50px;
+  display: flex;
+  gap: 1rem;
+  & a{
+    max-width: 15vw;
+    &:hover{
+      scale: 1.05;
+    }
+    & img{
+      width: 100%;
+    }
+  }
 }
 
 #yuklabOling .image-wrapper {
@@ -298,34 +428,10 @@ h2{
 #yuklabOling .image-wrapper img {
     max-width: 100%;
     height: auto;
+    scale: 1.4;
 }
 
-/* -------- Footer -------- */
-footer {
-    background-color: #fff;
-    padding: 2rem 15rem;  /* will override at smaller breakpoints */
-    color: var(--darkText);
-}
 
-footer section {
-    margin-bottom: 2rem;
-}
-
-footer img {
-    max-width: 200px;
-}
-
-footer a {
-    display: block;
-    color: var(--darkText);
-    text-decoration: none;
-    margin: 0.5rem 0;
-}
-
-footer p {
-    margin: 0.5rem 0;
-    font-size: 1rem;
-}
 
 
 /* ===========================
@@ -519,9 +625,17 @@ footer p {
   #yuklabOling .subtitle {
     font-size: 2.5rem;
   }
+    #yuklabOling .store-buttons {
+        & a{
+          max-width: 30vw !important;
+        }
+    }
   #yuklabOling .main-download {
     font-size: 0.9rem;
     padding: 0.75rem 1.5rem;
+  }
+  #yuklabOling .image-wrapper img{
+    scale: 1;
   }
 }
 
@@ -627,6 +741,11 @@ footer p {
 
     #yuklabOling .main-download {
         font-size: 1rem !important;
+    }
+    #yuklabOling .store-buttons {
+        & a{
+          max-width: 50vw !important;
+        }
     }
 
     footer {
@@ -737,9 +856,6 @@ footer p {
   #yuklabOling .main-download {
     font-size: 0.8rem;
     padding: 0.5rem 1rem;
-  }
-  #yuklabOling .store-buttons img {
-    height: 40px;
   }
 
   /* Footer */
