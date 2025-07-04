@@ -21,7 +21,7 @@
         <img src="images/logo.png" alt="" class="logo">
         <h1>To‘y xizmatlarini bir joyda toping<br>- Galishtik.uz bilan!</h1>
         <p>To‘yga kerak bo‘lgan barcha xizmatlar bir joyda.<br>San’atkorlardan tortib to to‘yxonagacha — barchasi siz uchun<br>Endi izlash oson, vaqt tejash esa kafolatli!</p>
-        <button class="buttonMain" style="position: relative;">Ilovani Yuklab Olish <svg width="46" height="104" viewBox="0 0 46 104" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 2.5ch; left: 2ch;">
+        <button class="buttonMain" style="position: relative;" onclick="function smoothScroll(target) { const currentScroll = window.pageYOffset; const start = performance.now(); const duration = 1000; function step(timestamp) { if (timestamp - start < duration) { window.requestAnimationFrame(step); window.scrollTo(0, currentScroll + (target - currentScroll) * (timestamp - start) / duration); } } window.requestAnimationFrame(step); } smoothScroll(document.querySelector('#yuklabOling').offsetTop);">Ilovani Yuklab Olish <svg width="46" height="104" viewBox="0 0 46 104" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 2.5ch; left: 2ch;">
             <path d="M2 1.37329C2.00017 81.5941 30.6905 57.9798 34.822 52.6423C70.3049 6.80177 -9.53292 32.1347 4.66125 102.705" stroke="#130F26" stroke-width="2.5" stroke-linecap="round" />
           </svg>
         </button>
@@ -39,11 +39,6 @@
         <svg width="7ch" height="7ch" viewBox="0 0 124 124" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; bottom: -3.5ch; left: -2.5ch;">
           <path d="M86.3474 2C76.4722 11.0172 63.6396 29.7092 31.2177 32.9779C-0.450531 36.1705 74.6031 3.02726 97.5111 17.6517C124.289 34.7467 -8.1881 84.113 8.77193 64.9345C18.2604 54.205 106.907 33.3564 106.907 50.2606C106.907 71.7648 8.77179 104.986 2.66813 97.3922C-8.09955 83.9963 114.757 54.8902 121.001 72.7607C128.447 94.07 50.0547 119.321 35.4387 111.169C23.7459 104.647 110.256 89.7993 122 122" stroke="black" stroke-width="2.5" stroke-linecap="round" />
         </svg>
-
-
-
-
-
       </p>
     </section>
 

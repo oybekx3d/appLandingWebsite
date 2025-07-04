@@ -206,7 +206,7 @@ h2{
 }
 
 #negaBiz article p {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: auto 0;
     text-align: end;
     font-weight: 700;
@@ -368,7 +368,7 @@ h2{
 
 #yuklabOling .store-buttons {
   display: flex;
-  margin-top: 10vw;
+  margin-top: 5vw;
   gap: 1rem;
   & a{
     max-width: 15vw;
