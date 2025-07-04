@@ -368,6 +368,7 @@ h2{
 
 #yuklabOling .store-buttons {
   display: flex;
+  margin-top: 10vw;
   gap: 1rem;
   & a{
     max-width: 15vw;
